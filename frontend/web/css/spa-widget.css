@@ -1,0 +1,1026 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #fff none repeat scroll 0 0;
+    font-family: Arial,Helvetica,"san-serif";
+    font-size: 12px;
+    position: relative;
+}
+body, html {
+    height: 100%;
+}
+.widget {
+    bottom: 0;
+    left: 0;
+    margin: 7px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.widget-browser-unsupported {
+    display: none;
+}
+h1 {
+    background: rgba(0, 0, 0, 0) url("https://images-na.ssl-images-amazon.com/images/G/01/ep/background-image-1x._V313533909_.png") no-repeat scroll -128px 0;
+    color: #2f3841;
+    font-size: 14px;
+    font-weight: 700;
+    height: 23px;
+    line-height: 23px;
+    margin: 0 0 4px;
+    padding: 0 0 0 30px;
+}
+.info-container {
+    background: #eaf3ff none repeat scroll 0 0;
+    border: 2px solid #eb7e10;
+    height: 59px;
+    margin: 0 0 6px;
+    overflow: auto;
+    padding: 4px 15px;
+    position: relative;
+}
+.info-container.payments {
+    height: 68px;
+    padding: 0;
+}
+.info-container.error {
+    background: #fffedb none repeat scroll 0 0;
+}
+.info-container ul {
+    list-style: outside none none;
+}
+.info-container ul li {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.info-container ul li.invalid {
+    margin: 0 40px 0 0;
+    max-width: 70%;
+}
+.info-container .address-update {
+    color: #c40000;
+    position: absolute;
+    right: 10px;
+    text-decoration: underline;
+    top: 18px;
+}
+.info-container.error .info-payment-detail-container {
+    display: table;
+    height: 100%;
+    margin: 0 20px;
+}
+.info-container.error .info-payment-detail-container p {
+    color: #333;
+    display: table-cell;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+}
+.overlay {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 8px;
+    bottom: 0;
+    left: 0;
+    opacity: 0.8;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.overlay-loading-image {
+    background: transparent url("https://images-na.ssl-images-amazon.com/images/G/01/ep/loading-large._V364197283_.gif") no-repeat scroll 50% 50%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.collapsible-button-controller {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.collapsible-button-controller.sandbox {
+    background: rgba(0, 0, 0, 0) url("https://images-na.ssl-images-amazon.com/images/G/01/ep/background-image-1x._V313533909_.png") no-repeat scroll -140px -790px;
+    padding: 0 0 0 75px;
+}
+.collapsible-button-controller a {
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    color: #000;
+    cursor: pointer;
+    display: block;
+    font-size: 11px;
+    height: 16px;
+    line-height: 16px;
+    outline: 0 none;
+    padding: 0 6px;
+    text-decoration: none;
+}
+.sandbox-container {
+    background: rgba(0, 0, 0, 0) url("https://images-na.ssl-images-amazon.com/images/G/01/ep/background-image-1x._V313533909_.png") no-repeat scroll -140px -790px;
+    height: 10px;
+    position: absolute;
+    right: 8px;
+    top: 10px;
+    width: 10px;
+}
+.address-list-container.loading {
+    background: rgba(0, 0, 0, 0) url("images/loading-small_labeled.gif") no-repeat scroll 50% 50%;
+}
+.address-list {
+    margin: 0;
+}
+.address-list.no-address-list {
+    margin: 0 auto;
+    width: 200px;
+}
+.address-list li {
+    display: block;
+    float: left;
+    width: 50%;
+}
+.address-list.no-address-list li {
+    width: 100%;
+}
+.address-list li a {
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #f6f6f6 0px, #e1e1e1 100%) repeat scroll 0 0;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    color: #333;
+    display: block;
+    font-size: 11px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 3px 6px 0;
+    overflow: hidden;
+    padding: 0 20px 0 30px;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.address-list li a.add-new-address {
+    padding: 0;
+}
+.address-list li a.add-new-address span {
+    text-align: center;
+}
+.address-list li a.invalid {
+    padding: 0 50px 0 30px;
+}
+.address-list li.de_DE a.invalid {
+    padding: 0 68px 0 30px;
+}
+.address-list li a > span.address-text {
+    display: inline-block;
+    height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+.address-list li a > span.address-update {
+    color: #c40000;
+    height: 30px;
+    position: absolute;
+    text-decoration: underline;
+}
+.address-list li a:hover {
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #ececec 0px, #d3d3d3 100%) repeat scroll 0 0;
+}
+.address-list li.even {
+    float: right;
+}
+.address-list li.even a {
+    margin: 0 0 6px 3px;
+}
+.address-list li.selected a {
+    background: url("https://images-na.ssl-images-amazon.com/images/G/01/ep/background-image-1x._V313533909_.png") no-repeat scroll -130px -293px, rgba(0, 0, 0, 0) -moz-linear-gradient(center top , #f6f6f6 0px, #e1e1e1 100%) repeat scroll 0 0;
+}
+.address-list li.selected a:hover {
+    background: url("https://images-na.ssl-images-amazon.com/images/G/01/ep/background-image-1x._V313533909_.png") no-repeat scroll -130px -293px, rgba(0, 0, 0, 0) -moz-linear-gradient(center top , #ececec 0px, #d3d3d3 100%) repeat scroll 0 0;
+}
+.address-list li.selected a.invalid {
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #f6f6f6 0px, #e1e1e1 100%) repeat scroll 0 0;
+}
+.payment-list-container.loading {
+    background: rgba(0, 0, 0, 0) url("images/loading-small_labeled.gif") no-repeat scroll 50% 50%;
+}
+.payment-list {
+    margin: 0;
+}
+.payment-list.no-payment-list {
+    margin: 0 auto;
+    width: 200px;
+}
+.payment-list li {
+    display: block;
+    float: left;
+    width: 50%;
+}
+.payment-list.no-payment-list li {
+    width: 100%;
+}
+.payment-list li a {
+    background: rgba(0, 0, 0, 0) -moz-linear-gradient(center top , #f6f6f6 0px, #e1e1e1 100%) repeat scroll 0 0;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    color: #333;
+    display: block;
+    font-size: 11px;
+    line-height: 30px;
+    margin: 0 3px 6px 0;
+    overflow: hidden;
+    padding: 0 10px 0 0;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.payment-list li a:hover {
+    background: rgba(0, 0, 0, 0) -moz-linear-gradient(center top , #ececec 0px, #d3d3d3 100%) repeat scroll 0 0;
+}
+.payment-list li a.disabled {
+    background: #e3e3e2 none repeat scroll 0 0;
+    color: #919191;
+    cursor: default;
+}
+.payment-list li.add-new-button a {
+    padding: 0 20px 0 30px;
+}
+.payment-list li a > span {
+    background: transparent url("https://images-na.ssl-images-amazon.com/images/G/01/ep/background-image-1x._V313533909_.png") no-repeat scroll 0 0;
+    display: block;
+    padding: 0 20px 0 25px;
+}
+.payment-list li a > span.VISA {
+    background-position: 100% -22px;
+}
+.payment-list li a > span.DISCOVER {
+    background-position: 100% -232px;
+}
+.payment-list li a > span.AMERICANEXPRESS {
+    background-position: 100% -142px;
+}
+.payment-list li a > span.JAPANCREDITBUREAU {
+    background-position: 100% -172px;
+}
+.payment-list li a > span.JCB {
+    background-position: 100% -172px;
+}
+.payment-list li a > span.MASTERCARD {
+    background-position: 100% -112px;
+}
+.payment-list li a > span.DINERSCLUB {
+    background-position: 100% -202px;
+}
+.payment-list li a > span.BANKACCOUNT {
+    background-position: 100% -82px;
+}
+.payment-list li a > span.MASTERCARDDEBIT {
+    background-position: 100% -112px;
+}
+.payment-list li a > span.SOLO {
+    background-position: 100% -112px;
+}
+.payment-list li a > span.BANCOMAT {
+    background-position: 100% -52px;
+}
+.payment-list li a > span.AMEX {
+    background-position: 100% -142px;
+}
+.payment-list li a > span.DUALMESSAGINGCARD {
+    background-position: 100% -862px;
+}
+.payment-list li a > span.AMAZONPLCC {
+    background: transparent url("https://images-na.ssl-images-amazon.com/images/G/01/checkout/payselect/card-logos-small/plcc.gif") no-repeat scroll 100% 5px / 30px 20px;
+}
+.payment-list li a span.status-text {
+    float: right;
+    margin: 0 20px 0 0;
+}
+.payment-list li a > span > span > strong {
+    float: left;
+    font-weight: bold;
+    max-width: 60%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.payment-list li a > span > span > span {
+    float: left;
+    font-weight: normal;
+}
+.payment-list li a.add-new-payment {
+    font-weight: normal;
+    text-align: center;
+}
+.payment-list li a > span > span.status-text {
+    overflow: hidden;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 27%;
+}
+.payment-list li.de_DE a > span > span.status-text {
+    width: 50%;
+}
+.payment-list li.even {
+    float: right;
+}
+.payment-list li.even a {
+    margin: 0 0 6px 3px;
+}
+.payment-list li.selected a {
+    background: url("https://images-na.ssl-images-amazon.com/images/G/01/ep/background-image-1x._V313533909_.png") no-repeat scroll -130px -293px, rgba(0, 0, 0, 0) -moz-linear-gradient(center top , #f6f6f6 0px, #e1e1e1 100%) repeat scroll 0 0;
+}
+.payment-list li.selected a:hover {
+    background: url("https://images-na.ssl-images-amazon.com/images/G/01/ep/background-image-1x._V313533909_.png") no-repeat scroll -130px -293px, rgba(0, 0, 0, 0) -moz-linear-gradient(center top , #ececec 0px, #d3d3d3 100%) repeat scroll 0 0;
+}
+.payment-list li.selected a.disabled {
+    background: #e3e3e2 url("https://images-na.ssl-images-amazon.com/images/G/01/ep/background-image-1x._V313533909_.png") no-repeat scroll -130px -314px;
+}
+.pagination-container {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+.pagination {
+    float: left;
+    margin: 0 10px 0 0;
+}
+.pagination li {
+    float: left;
+    list-style: outside none none;
+}
+.pagination li a {
+    display: block;
+    height: 31px;
+    outline: 0 none;
+    text-indent: -9999px;
+    width: 34px;
+}
+.pagination li.prev a {
+    background: rgba(0, 0, 0, 0) url("https://images-na.ssl-images-amazon.com/images/G/01/ep/background-image-1x._V313533909_.png") no-repeat scroll -14px -262px;
+    margin: 0 5px 0 0;
+}
+.pagination li.prev.disable a {
+    background: rgba(0, 0, 0, 0) url("https://images-na.ssl-images-amazon.com/images/G/01/ep/background-image-1x._V313533909_.png") no-repeat scroll -82px -262px;
+}
+.pagination li.next a {
+    background: rgba(0, 0, 0, 0) url("https://images-na.ssl-images-amazon.com/images/G/01/ep/background-image-1x._V313533909_.png") no-repeat scroll -48px -262px;
+}
+.pagination li.next.disable a {
+    background: rgba(0, 0, 0, 0) url("https://images-na.ssl-images-amazon.com/images/G/01/ep/background-image-1x._V313533909_.png") no-repeat scroll -116px -262px;
+}
+.footer {
+    bottom: 0;
+    font-size: 11px;
+    position: absolute;
+    width: 100%;
+}
+.footer p {
+    color: #576067;
+    float: left;
+}
+.footer p.right {
+    float: right;
+    text-align: right;
+}
+.footer p.right a {
+    color: #124c90;
+    text-align: right;
+}
+.footer p.right a.privacy {
+    color: #aeaeae;
+    display: inline-block;
+    font-size: 11px;
+    line-height: 15px;
+    outline: 0 none;
+    text-decoration: none;
+    width: 100px;
+}
+.footer p.right a.privacy.single-line {
+    float: right;
+    width: 180px;
+}
+.footer .info {
+    float: left;
+    margin: 1px 0 0;
+}
+.footer .info p {
+    color: #576067;
+    display: block;
+    margin: 0 0 3px;
+    width: 100%;
+}
+.footer .info a {
+    color: #124c90;
+}
+.box-container {
+    background: #ffd none repeat scroll 0 0;
+    border: 2px solid #eb7e10;
+    display: block;
+    padding: 10px;
+}
+.box-container.payments {
+    margin: 0 0 7px;
+}
+.error-container {
+    display: table;
+    height: 100%;
+    vertical-align: middle;
+    width: 100%;
+}
+.error-container div {
+    display: table-cell;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px;
+    vertical-align: middle;
+}
+.error-container div.center {
+    text-align: center;
+}
+.error-container div p.warning {
+    background: rgba(0, 0, 0, 0) url("https://images-na.ssl-images-amazon.com/images/G/01/ep/background-image-1x._V313533909_.png") no-repeat scroll -125px -650px;
+    display: inline-block;
+    margin: 0 0 5px;
+    min-height: 25px;
+    padding: 0 0 0 35px;
+}
+.error-container div p.error {
+    background: rgba(0, 0, 0, 0) url("https://images-na.ssl-images-amazon.com/images/G/01/ep/background-image-1x._V313533909_.png") no-repeat scroll -125px -525px;
+    display: inline-block;
+    min-height: 25px;
+    padding: 0 0 10px 35px;
+}
+.error-container div p.margin-bottom-10 {
+    margin: 0 0 10px;
+}
+.error-container div p.small {
+    font-size: 12px;
+}
+#consent .box-container {
+    padding: 8px;
+}
+#consent .error-container div {
+    margin: 0 10px;
+}
+#consent .error-container div p.error {
+    font-size: 12px;
+    margin: 0;
+    padding: 0 0 0 35px;
+}
+.consent-container p {
+    color: #333;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    margin: 10px 0;
+}
+.consent-container a {
+    color: #005fa2;
+}
+.consent-container .learn-more {
+    color: #0066c0;
+    padding: 0 0 0 35px;
+}
+.consent-container .consent-text {
+    display: block;
+    padding: 0 0 0 35px;
+}
+.consent-link {
+    padding: 8px 0 0;
+}
+.consent-link {
+    background: rgba(0, 0, 0, 0) url("https://images-na.ssl-images-amazon.com/images/G/01/ep/u173.png") no-repeat scroll 0 0;
+    color: #111;
+    display: block;
+    font-size: 13px;
+    height: 25px;
+    line-height: 25px;
+    outline: 0 none;
+    padding: 0 0 0 35px;
+    position: absolute;
+    text-decoration: none;
+}
+.consent-link.ticked {
+    background: rgba(0, 0, 0, 0) url("https://images-na.ssl-images-amazon.com/images/G/01/ep/u177.png") no-repeat scroll 0 0;
+}
+.consent-popup {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    bottom: 0;
+    display: none;
+    left: 0;
+    margin: 5px;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.consent-popup.popup {
+    display: block;
+}
+.consent-popup h2 {
+    font-size: 13px;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+.consent-popup-inner {
+    height: 100%;
+    position: relative;
+}
+.consent-popup-inner-link {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+.consent-popup-inner-link a {
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+.consent-popup a {
+    color: #005fa2;
+}
+.consent-popup .terms {
+    bottom: 0;
+    color: #005fa2;
+    left: 0;
+    position: absolute;
+}
+.consent-popup .close {
+    float: right;
+    font-weight: bold;
+    margin: 15px 0 0;
+}
+.consent-popup .close-button-x {
+    color: #999;
+    font-family: "Helvetica";
+    font-size: 20px;
+    line-height: 10px;
+    position: absolute;
+    right: 0;
+    text-decoration: none;
+    top: 0;
+}
+.consent-popup p {
+    margin: 0 12px 0 0;
+}
+.consent-popup .close-button {
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #f6f6f6 0px, #e1e1e1 100%) repeat scroll 0 0;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    bottom: 0;
+    color: #111;
+    display: block;
+    font-size: 13px;
+    padding: 5px 20px;
+    position: absolute;
+    right: 0;
+    text-decoration: none;
+}
+.consent-popup .close-button:hover {
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #ececec 0px, #d3d3d3 100%) repeat scroll 0 0;
+}
+#sva-container {
+    background: white none repeat scroll 0 0;
+    border-top: 1px solid #eb7e10;
+    display: table;
+    height: 32px;
+    width: 100%;
+}
+#sva-container .sva-text {
+    cursor: default;
+    display: table-cell;
+    font-size: 11px;
+    margin: auto;
+    min-height: 14px;
+    outline: 0 none;
+    vertical-align: middle;
+}
+#sva-container .sva-text a {
+    color: #2f3841;
+    display: table-cell;
+    height: 32px;
+    min-height: 14px;
+    outline: 0 none;
+    padding-left: 60px;
+    text-decoration: none;
+    vertical-align: middle;
+}
+#sva-container .sva-text a.read {
+    cursor: default;
+}
+#sva-container .sva-text a span.amount {
+    color: #004b91;
+}
+#sva-container .sva-text.checked a {
+    background: rgba(0, 0, 0, 0) url("https://images-na.ssl-images-amazon.com/images/G/01/ep/background-image-1x._V313533909_.png") no-repeat scroll -110px -337px;
+}
+#sva-container .sva-text.unchecked a {
+    background: rgba(0, 0, 0, 0) url("https://images-na.ssl-images-amazon.com/images/G/01/ep/background-image-1x._V313533909_.png") no-repeat scroll -110px -362px;
+}
+#sva-container .sva-text.action a {
+    background: rgba(0, 0, 0, 0) url("https://images-na.ssl-images-amazon.com/images/G/01/ep/background-image-1x._V313533909_.png") no-repeat scroll -120px -387px;
+    color: #c40000;
+    font-size: 12px;
+    padding: 0 0 0 35px;
+    text-decoration: underline;
+}
+#asc-container {
+    background: white none repeat scroll 0 0;
+    border-top: 1px solid #ccc;
+    height: 32px;
+    overflow: auto;
+    width: 100%;
+}
+#asc-container .asc-financial-offer-info {
+    font-size: 11px;
+    line-height: 13px;
+    min-height: 15px;
+    padding: 6px 0 0 17px;
+}
+#asc-container .asc-financial-offer-info ul {
+    margin: 5px;
+}
+#asc-container .asc-financial-offer-info a.no-link-underline {
+    text-decoration: none;
+}
+#asc-container .asc-financial-offer-info .asc-underline {
+    text-decoration: underline;
+}
+#asc-container .asc-financial-offer-info .asc-highlight {
+    color: #558ed5;
+}
+#asc-container .asc-financial-offer-info .asc-highlight a {
+    color: #558ed5;
+}
+#asc-container .asc-financial-offer-info .asc-financial-offer-text {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    white-space: nowrap;
+    width: auto;
+}
+#asc-container {
+    transition: height 0.3s ease 0s;
+}
+.payment-image.AMAZONPLCC-left {
+    transition: background-size 0.3s ease 0s, min-height 0.3s ease 0s, line-height 0.3s ease 0s, padding 0.3s ease 0s;
+}
+.asc-expand .payment-image.AMAZONPLCC-left {
+    background-size: 20px 12px;
+    line-height: 12px;
+    min-height: 12px;
+    padding: 0 0 0 28px;
+}
+.asc-expand #asc-container {
+    height: 43px;
+}
+.info-payment-detail {
+    padding: 6px 15px;
+}
+.status-text {
+    color: #c40000;
+    text-decoration: underline;
+}
+.info-payment-detail .status-text {
+    float: right;
+    text-decoration: none;
+}
+.payment-image {
+    background: transparent url("https://images-na.ssl-images-amazon.com/images/G/01/ep/background-image-1x._V313533909_.png") no-repeat scroll 0 0;
+    line-height: 22px;
+    min-height: 22px;
+    padding: 0 0 0 44px;
+}
+.payment-image span {
+    font-size: 12px;
+    font-weight: bold;
+}
+.payment-image span.card-number, .payment-image span.normal {
+    font-weight: normal;
+}
+.payment-image.VISA-left {
+    background-position: -115px -26px;
+}
+.payment-image.DISCOVER-left {
+    background-position: -115px -236px;
+}
+.payment-image.MASTERCARD-left {
+    background-position: -115px -116px;
+}
+.payment-image.JAPANCREDITBUREAU-left {
+    background-position: -115px -176px;
+}
+.payment-image.JCB-left {
+    background-position: -115px -176px;
+}
+.payment-image.AMERICANEXPRESS-left {
+    background-position: -115px -146px;
+}
+.payment-image.DINERSCLUB-left {
+    background-position: -115px -206px;
+}
+.payment-image.BANKACCOUNT-left {
+    background-position: -115px -86px;
+}
+.payment-image.MASTERCARDDEBIT-left {
+    background-position: -115px -116px;
+}
+.payment-image.SOLO-left {
+    background-position: -115px -116px;
+}
+.payment-image.BANCOMAT-left {
+    background-position: -115px -56px;
+}
+.payment-image.AMEX-left {
+    background-position: -115px -146px;
+}
+.payment-image.DUALMESSAGINGCARD-left {
+    background-position: -115px -866px;
+}
+.payment-image.AMAZONPLCC-left {
+    background: transparent url("https://images-na.ssl-images-amazon.com/images/G/01/checkout/payselect/card-logos-small/plcc.gif") no-repeat scroll 0 0 / 40px 25px;
+}
+@media all and (max-width: 397px) and (min-width: 0px) {
+.address-list li {
+    display: block;
+    float: left;
+    width: 100%;
+}
+.address-list li a {
+    margin: 0 0 6px !important;
+}
+.address-list li:nth-child(2n) a {
+    margin: 0 0 6px;
+}
+.payment-list li {
+    display: block;
+    float: left;
+    width: 100%;
+}
+.payment-list li a {
+    margin: 0 0 6px !important;
+}
+#asc-container .asc-financial-offer-info .asc-financial-offer-text {
+    width: 65%;
+}
+.payment-list li.de_DE a > span > span > strong {
+    width: auto;
+}
+.payment-list li.invalid a > span > span.status-text {
+    width: 20%;
+}
+.payment-list li.invalid a > span > span > strong {
+    max-width: 50%;
+    width: auto;
+}
+.payment-list li.invalid.de_DE a > span > span.status-text {
+    width: 30%;
+}
+.payment-list li.invalid.de_DE a > span > span > strong {
+    max-width: 39%;
+    width: auto;
+}
+}
+@media all and (min-width: 398px) and (max-width: 450px) {
+.payment-list li a > span > span > strong {
+    max-width: 60%;
+    width: auto;
+}
+.payment-list li.invalid a > span > span > strong {
+    max-width: 32%;
+    width: auto;
+}
+.payment-list li.invalid.de_DE a > span > span > strong {
+    max-width: 8%;
+    width: auto;
+}
+}
+@media all and (min-width: 451px) and (max-width: 500px) {
+.payment-list li a > span > span > strong {
+    width: auto;
+}
+.payment-list li.invalid a > span > span > strong {
+    max-width: 38%;
+    width: auto;
+}
+.payment-list li.invalid.de_DE a > span > span > strong {
+    max-width: 25%;
+    width: auto;
+}
+.payment-list li.invalid.de_DE a > span > span.status-text {
+    width: 40%;
+}
+}
+@media all and (min-width: 501px) and (max-width: 550px) {
+.payment-list li.invalid a > span > span > strong {
+    max-width: 45%;
+    width: auto;
+}
+.payment-list li.invalid.de_DE a > span > span > strong {
+    max-width: 33%;
+    width: auto;
+}
+.payment-list li.invalid.de_DE a > span > span.status-text {
+    width: 35%;
+}
+}
+@media all and (min-width: 551px) {
+.payment-list li.invalid.de_DE a > span > span > strong {
+    max-width: 41%;
+    width: auto;
+}
+.payment-list li.invalid.de_DE a > span > span.status-text {
+    width: 30%;
+}
+}
+@media all and (min-width: 398px) {
+.address-list li {
+    display: block;
+    float: left;
+    width: 50%;
+}
+}
+@media screen and (max-device-width: 480px) {
+body {
+}
+}
+@media not all, (min-resolution: 192dpi), (min-resolution: 2dppx) {
+h1 {
+    background: rgba(0, 0, 0, 0) url("https://images-na.ssl-images-amazon.com/images/G/01/ep/background-image-2x._V313534233_.png") no-repeat scroll -128px 0 / 150px 900px;
+}
+.collapsible-button-controller.sandbox {
+    background: rgba(0, 0, 0, 0) url("https://images-na.ssl-images-amazon.com/images/G/01/ep/background-image-2x._V313534233_.png") no-repeat scroll -140px -790px / 150px 900px;
+}
+.sandbox-container {
+    background: rgba(0, 0, 0, 0) url("https://images-na.ssl-images-amazon.com/images/G/01/ep/background-image-2x._V313534233_.png") no-repeat scroll -140px -790px / 150px 900px;
+}
+.pagination li.prev a {
+    background: rgba(0, 0, 0, 0) url("https://images-na.ssl-images-amazon.com/images/G/01/ep/background-image-2x._V313534233_.png") no-repeat scroll -14px -234px / 150px 900px;
+}
+.pagination li.next a {
+    background: rgba(0, 0, 0, 0) url("https://images-na.ssl-images-amazon.com/images/G/01/ep/background-image-2x._V313534233_.png") no-repeat scroll -48px -234px / 150px 900px;
+}
+.pagination li.prev.disable a {
+    background: rgba(0, 0, 0, 0) url("https://images-na.ssl-images-amazon.com/images/G/01/ep/background-image-2x._V313534233_.png") no-repeat scroll -82px -234px / 150px 900px;
+}
+.pagination li.next.disable a {
+    background: rgba(0, 0, 0, 0) url("https://images-na.ssl-images-amazon.com/images/G/01/ep/background-image-2x._V313534233_.png") no-repeat scroll -116px -234px / 150px 900px;
+}
+.error-container div p.warning {
+    background: rgba(0, 0, 0, 0) url("https://images-na.ssl-images-amazon.com/images/G/01/ep/background-image-2x._V313534233_.png") no-repeat scroll -125px -650px / 150px 900px;
+}
+.error-container div p.error {
+    background: rgba(0, 0, 0, 0) url("https://images-na.ssl-images-amazon.com/images/G/01/ep/background-image-2x._V313534233_.png") no-repeat scroll -125px -525px / 150px 900px;
+}
+.payment-list li a > span {
+    background: transparent url("https://images-na.ssl-images-amazon.com/images/G/01/ep/background-image-2x._V313534233_.png") no-repeat scroll 0 0 / 150px 900px;
+    display: block;
+    padding: 0 20px 0 25px;
+}
+.payment-list li a > span.VISA {
+    background-position: 100% -22px;
+}
+.payment-list li a > span.DISCOVER {
+    background-position: 100% -204px;
+}
+.payment-list li a > span.AMERICANEXPRESS {
+    background-position: 100% -126px;
+}
+.payment-list li a > span.MASTERCARD {
+    background-position: 100% -100px;
+}
+.payment-list li a > span.JAPANCREDITBUREAU {
+    background-position: 100% -152px;
+}
+.payment-list li a > span.JCB {
+    background-position: 100% -152px;
+}
+.payment-list li a > span.DINERSCLUB {
+    background-position: 100% -178px;
+}
+.payment-list li a > span.BANKACCOUNT {
+    background-position: 100% -74px;
+}
+.payment-list li a > span.MASTERCARDDEBIT {
+    background-position: 100% -100px;
+}
+.payment-list li a > span.SOLO {
+    background-position: 100% -100px;
+}
+.payment-list li a > span.BANCOMAT {
+    background-position: 100% -48px;
+}
+.payment-list li a > span.AMEX {
+    background-position: 100% -126px;
+}
+.payment-list li a > span.DUALMESSAGINGCARD {
+    background-position: 100% -875px;
+}
+.payment-list li a > span.AMAZONPLCC {
+    background: transparent url("https://images-na.ssl-images-amazon.com/images/G/01/checkout/payselect/card-logos-small/plcc.gif") no-repeat scroll 100% 5px / 30px 20px;
+}
+.payment-image {
+    background: transparent url("https://images-na.ssl-images-amazon.com/images/G/01/ep/background-image-2x._V313534233_.png") no-repeat scroll 0 0 / 150px 900px;
+}
+.payment-image.VISA-left {
+    background-position: -115px -26px;
+}
+.payment-image.DISCOVER-left {
+    background-position: -115px -208px;
+}
+.payment-image.AMERICANEXPRESS-left {
+    background-position: -115px -130px;
+}
+.payment-image.MASTERCARD-left {
+    background-position: -115px -104px;
+}
+.payment-image.JAPANCREDITBUREAU-left {
+    background-position: -115px -156px;
+}
+.payment-image.JCB-left {
+    background-position: -115px -156px;
+}
+.payment-image.DINERSCLUB-left {
+    background-position: -115px -182px;
+}
+.payment-image.BANKACCOUNT-left {
+    background-position: -115px -78px;
+}
+.payment-image.MASTERCARDDEBIT-left {
+    background-position: -115px -104px;
+}
+.payment-image.SOLO-left {
+    background-position: -115px -104px;
+}
+.payment-image.BANCOMAT-left {
+    background-position: -115px -52px;
+}
+.payment-image.AMEX-left {
+    background-position: -115px -130px;
+}
+.payment-image.DUALMESSAGINGCARD-left {
+    background-position: -115px -879px;
+}
+.payment-image.AMAZONPLCC-left {
+    background: transparent url("https://images-na.ssl-images-amazon.com/images/G/01/checkout/payselect/card-logos-small/plcc.gif") no-repeat scroll 0 0 / 40px 25px;
+}
+.payment-list li.selected a {
+    background-attachment: scroll, scroll;
+    background-clip: border-box, border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("https://images-na.ssl-images-amazon.com/images/G/01/ep/background-image-2x._V313534233_.png"), linear-gradient(to bottom, #f6f6f6 0px, #e1e1e1 100%);
+    background-origin: padding-box, padding-box;
+    background-position: -128px -270px, 0 0;
+    background-repeat: no-repeat, repeat;
+    background-size: 150px 900px;
+}
+.payment-list li.selected a.disabled {
+    background: #e3e3e2 url("https://images-na.ssl-images-amazon.com/images/G/01/ep/background-image-2x._V313534233_.png") no-repeat scroll -128px -300px / 150px 900px;
+    cursor: default;
+}
+.address-list li.selected a {
+    background-attachment: scroll, scroll;
+    background-clip: border-box, border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("https://images-na.ssl-images-amazon.com/images/G/01/ep/background-image-2x._V313534233_.png"), linear-gradient(to bottom, #f6f6f6 0px, #e1e1e1 100%);
+    background-origin: padding-box, padding-box;
+    background-position: -128px -270px, 0 0;
+    background-repeat: no-repeat, repeat;
+    background-size: 150px 900px;
+}
+#sva-container .sva-text.checked a {
+    background: rgba(0, 0, 0, 0) url("https://images-na.ssl-images-amazon.com/images/G/01/ep/background-image-2x._V313534233_.png") no-repeat scroll -110px -327px / 150px 900px;
+}
+#sva-container .sva-text.unchecked a {
+    background: rgba(0, 0, 0, 0) url("https://images-na.ssl-images-amazon.com/images/G/01/ep/background-image-2x._V313534233_.png") no-repeat scroll -110px -353px / 150px 900px;
+}
+}
+.ng-cloak {
+    display: none;
+}
+.clearfix::after {
+    clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+.clearfix {
+    display: inline-block;
+}
+* html .clearfix {
+    height: 1%;
+}
+.clearfix {
+    display: block;
+}

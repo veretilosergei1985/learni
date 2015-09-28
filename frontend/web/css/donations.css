@@ -1,0 +1,362 @@
+
+div.ap-dw-container * {
+    animation: 0s ease 0s normal none 1 running none;
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    bottom: auto;
+    box-shadow: none;
+    box-sizing: content-box;
+    caption-side: top;
+    clear: none;
+    clip: auto;
+    color: inherit;
+    content: normal;
+    counter-increment: none;
+    counter-reset: none;
+    cursor: auto;
+    direction: ltr;
+    display: block;
+    empty-cells: show;
+    float: none;
+    font-family: inherit;
+    font-size: medium;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    height: auto;
+    left: auto;
+    letter-spacing: normal;
+    line-height: normal;
+    list-style: outside none none;
+    margin: 0;
+    max-height: none;
+    max-width: none;
+    min-height: 0;
+    min-width: 0;
+    opacity: 1;
+    outline: medium none;
+    overflow: visible;
+    padding: 0;
+    page-break-after: auto;
+    page-break-before: auto;
+    page-break-inside: auto;
+    perspective: none;
+    perspective-origin: 50% 50%;
+    position: relative;
+    quotes: "“" "”" "‘" "’";
+    right: auto;
+    table-layout: auto;
+    text-align: inherit;
+    text-decoration-color: inherit;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    text-indent: 0;
+    text-shadow: none;
+    text-transform: none;
+    top: auto;
+    transform: none;
+    transition: none 0s ease 0s ;
+    unicode-bidi: normal;
+    vertical-align: baseline;
+    visibility: visible;
+    white-space: normal;
+    width: auto;
+    word-spacing: normal;
+    z-index: auto;
+}
+div.ap-dw-container div.ap-dw-main {
+    border-color: transparent;
+    border-radius: 7px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "ArialMT","Arial","Helvetica","san-serif";
+    font-size: 12px;
+    padding: 20px;
+}
+div.ap-dw-container div.ap-dw-content-container {
+    width: 100%;
+}
+div.ap-dw-container .ap-dw-cf::after {
+    clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    position: relative;
+    visibility: hidden;
+}
+div.ap-dw-container h3.ap-dw-main-heading {
+    font-size: 22px;
+    margin: 0 0 5px;
+    padding: 0 0 0 40px;
+}
+div.ap-dw-container h3.ap-dw-main-heading::before {
+    background: rgba(0, 0, 0, 0) url("https://images-na.ssl-images-amazon.com/images/G/01/EP/offAmazonPayments/common/us/devo/css/images/donations/sprites._V323051505_.png") repeat scroll 0 0;
+    content: " ";
+    display: block;
+    height: 35px;
+    left: 0;
+    margin-top: -15px;
+    position: absolute;
+    top: 50%;
+    width: 32px;
+}
+div.ap-dw-container ul.ap-dw-list {
+    list-style: outside none none;
+    margin: 10px 0;
+    width: 100%;
+}
+div.ap-dw-container a.ap-dw-list-item-link {
+    border-style: solid;
+    border-width: 2px 1px 2px 0;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 15px 0;
+    text-align: center;
+}
+div.ap-dw-container a.ap-dw-selected {
+    border-style: solid;
+    border-width: 3px;
+    padding: 14px 0;
+}
+div.ap-dw-container a.ap-dw-selected::before, div.ap-dw-container a.ap-dw-selected::after {
+    border-bottom: 0 none;
+    border-style: solid solid none;
+    border-width: 9px 9px 0;
+    content: " ";
+    display: block;
+    height: 0;
+    left: 50%;
+    margin-left: -8px;
+    position: absolute;
+    top: -2px;
+    width: 0;
+}
+div.ap-dw-container a.ap-dw-selected::after {
+    top: -6px;
+}
+div.ap-dw-container li.ap-dw-list-item {
+    float: left;
+    width: 24.75%;
+}
+div.ap-dw-container li.ap-dw-list-item:first-child a.ap-dw-list-item-link {
+    border-bottom-left-radius: 5px;
+    border-left-width: 2px;
+    border-top-left-radius: 5px;
+}
+div.ap-dw-container li.ap-dw-list-item:first-child a.ap-dw-selected {
+    border-left-width: 3px;
+}
+div.ap-dw-container li.ap-dw-list-item:last-child a.ap-dw-list-item-link {
+    border-bottom-right-radius: 5px;
+    border-right-width: 2px;
+    border-top-right-radius: 5px;
+}
+div.ap-dw-container li.ap-dw-list-item:last-child a.ap-dw-selected {
+    border-right-width: 3px;
+}
+div.ap-dw-container div.ap-dw-optional {
+    margin: 0 0 14px;
+    width: 100%;
+}
+div.ap-dw-container div.ap-dw-optional-container {
+    float: left;
+    width: 50%;
+}
+div.ap-dw-container h4.ap-dw-optional-heading {
+    font-size: 15px;
+    margin: 16px 0 0 2px;
+    padding: 0;
+    text-align: center;
+}
+div.ap-dw-container div.ap-dw-optional-input-container {
+    border-color: transparent;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+    margin: 3px;
+    padding: 10px 10px 10px 14px;
+}
+div.ap-dw-container div.ap-dw-selected {
+    border-style: solid;
+    border-width: 3px;
+    margin: 1px;
+}
+div.ap-dw-container div.ap-dw-selected::before, div.ap-dw-container div.ap-dw-selected::after {
+    border-right: 0 none;
+    border-style: solid none solid solid;
+    border-width: 10px 0 10px 10px;
+    content: " ";
+    display: block;
+    height: 0;
+    left: -3px;
+    margin-top: -10px;
+    position: absolute;
+    top: 50%;
+    width: 0;
+}
+div.ap-dw-container div.ap-dw-selected::after {
+    left: -7px;
+}
+div.ap-dw-container div.ap-dw-hidden {
+    display: none;
+}
+div.ap-dw-container div.ap-dw-input-only {
+    margin: 0 0 10px;
+}
+div.ap-dw-container input.ap-dw-optional-input {
+    border: 0 none;
+    font-size: 16px;
+    height: 20px;
+    margin: 0;
+    width: 100%;
+}
+div.ap-dw-container input.ap-dw-optional-input:focus {
+    outline: 0 none;
+}
+div.ap-dw-container span.ap-dw-error {
+    background: #fff none repeat scroll 0 0;
+    border-color: #df1800;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    color: #df1800;
+    display: none;
+    font-size: 12px;
+    padding: 5px 17px;
+    top: -5px;
+}
+div.ap-dw-container span.ap-dw-error-active {
+    display: block;
+}
+div.ap-dw-container span.ap-dw-error-active::before {
+    background: rgba(0, 0, 0, 0) url("https://images-na.ssl-images-amazon.com/images/G/01/EP/offAmazonPayments/common/us/devo/css/images/donations/sprites._V323051505_.png") no-repeat scroll -36px -37px;
+    content: " ";
+    display: block;
+    height: 13px;
+    left: 8px;
+    margin-top: -7px;
+    position: absolute;
+    top: 12px;
+    width: 7px;
+}
+div.ap-dw-container div.ap-dw-error-active {
+    border-color: #df1800 !important;
+}
+div.ap-dw-container div.ap-dw-error-active::before {
+    border-left-color: #df1800 !important;
+}
+div.ap-dw-container div.ap-dw-error-active > img {
+    cursor: default !important;
+    opacity: 0.5;
+}
+@media (min-device-width: 900px) {
+div.ap-dw-container div.ap-dw-content-container {
+    margin: 10px 0;
+}
+div.ap-dw-container ul.ap-dw-list, div.ap-dw-container div.ap-dw-optional {
+    float: left;
+    margin: 0;
+    width: 49.555%;
+}
+}
+div.ap-light div.ap-dw-main {
+    background-color: #f7f7f7;
+    border-color: #e5e5e5;
+}
+div.ap-light h3.ap-dw-main-heading {
+    color: #333;
+}
+div.ap-light h3.ap-dw-main-heading::before {
+    background-position: 0 0;
+}
+div.ap-light a.ap-dw-list-item-link {
+    background-color: #fff;
+    border-color: #e5e5e5;
+}
+div.ap-light a.ap-dw-selected::after {
+    border-top-color: #f7f7f7;
+}
+div.ap-light li.ap-dw-list-item:first-child a.ap-dw-list-item-link {
+    border-left-color: #e5e5e5;
+}
+div.ap-light div.ap-dw-optional-input-container {
+    background-color: #fff;
+    border-color: #e5e5e5;
+}
+div.ap-light h4.ap-dw-optional-heading {
+    color: #333;
+}
+div.ap-light input.ap-dw-optional-input {
+    background: #fff none repeat scroll 0 0;
+    color: #ccc;
+}
+div.ap-light div.ap-dw-optional-input-container::after {
+    border-left-color: #f7f7f7;
+}
+div.ap-dark div.ap-dw-main {
+    background-color: #495058;
+    border-color: #3d4349;
+}
+div.ap-dark h3.ap-dw-main-heading {
+    color: #fff;
+}
+div.ap-dark h3.ap-dw-main-heading::before {
+    background-position: -34px 0;
+}
+div.ap-dark a.ap-dw-list-item-link {
+    background-color: #b6b9bc;
+    border-color: #3d4349;
+}
+div.ap-dark a.ap-dw-selected::after {
+    border-top-color: #495058;
+}
+div.ap-dark li.ap-dw-list-item:first-child a.ap-dw-list-item-link {
+    border-left-color: #3d4349;
+}
+div.ap-dark div.ap-dw-optional-input-container {
+    background-color: #b6b9bc;
+    border-color: #3d4349;
+}
+div.ap-dark h4.ap-dw-optional-heading {
+    color: #fff;
+}
+div.ap-dark input.ap-dw-optional-input {
+    background: #b6b9bc none repeat scroll 0 0;
+    color: #333;
+}
+div.ap-dark div.ap-dw-optional-input-container::after {
+    border-left-color: #495058;
+}
+div.ap-light li.ap-dw-list-item:first-child a.ap-dw-selected, div.ap-dark li.ap-dw-list-item:first-child a.ap-dw-selected {
+    border-left-color: #e67900;
+}
+div.ap-light a.ap-dw-selected, div.ap-dark a.ap-dw-selected {
+    background: #fff9e4 none repeat scroll 0 0;
+    border-color: #e67900;
+}
+div.ap-light a.ap-dw-selected::before, div.ap-dark a.ap-dw-selected::before {
+    border-color: #e67900 transparent transparent;
+}
+div.ap-light a.ap-dw-selected::after, div.ap-dark a.ap-dw-selected::after {
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+div.ap-light div.ap-dw-selected, div.ap-dark div.ap-dw-selected {
+    background: #fff9e4 none repeat scroll 0 0;
+    border-color: #e67900;
+    color: #333;
+}
+div.ap-light div.ap-dw-selected::before, div.ap-dark div.ap-dw-selected::before {
+    border-color: transparent transparent transparent #e67900;
+}
+div.ap-light div.ap-dw-selected::after, div.ap-dark div.ap-dw-selected::after {
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-top-color: transparent;
+}
+div.ap-light div.ap-dw-selected input.ap-dw-optional-input, div.ap-dark div.ap-dw-selected input.ap-dw-optional-input {
+    background: #fff9e4 none repeat scroll 0 0;
+    color: #333;
+}

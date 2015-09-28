@@ -1,0 +1,35 @@
+<section class="content-section ng-scope">
+<h2 class="header-title ng-binding">Featured Games</h2>
+<article class="board-container ng-scope ng-isolate-scope" itemtype="http://schema.org/Article" itemscope="" section="featured" index="0" ng-repeat="post in category track by post.id" lst-board-tile="board">
+    <div>
+        <a class="ng-scope" itemprop="url" ng-href="/users/58/boards/10649-board-games-for-one" rel="bookmark" ng-click="checkBoardPermissions(board, $event)" href="/users/58/boards/10649-board-games-for-one">
+            <figure class="board-figure" ng-style="{'background-image': 'url(http://assets0.learni.st/board_image/1743846/image/w500h500_10649-board-games-for-one.jpg)'}" style="background-image: url("http://assets0.learni.st/board_image/1743846/image/w500h500_10649-board-games-for-one.jpg");"></figure>
+        </a>
+        <div class="board-content ng-scope" itemprop="articleBody">
+            <a class="board-category ng-binding" ng-href="/categories/8-games" href="/categories/8-games">Games</a>
+            <meta content="2012-12-29" itemprop="datePublished">
+            <h3 class="board-title" itemprop="headline">
+                <a class="ng-binding" itemprop="url" ng-href="/users/58/boards/10649-board-games-for-one" rel="bookmark" ng-click="checkBoardPermissions(board, $event)" href="/users/58/boards/10649-board-games-for-one">{{post.title}}</a>
+            </h3>
+            <a class="author" itemprop="url" itemtype="http://schema.org/Person" ng-href="/users/58" rel="bookmark" href="/users/58">
+                <span class="ng-binding" itemprop="author">Jim Jacobson</span>
+                <span class="stats">
+                    <span class="bullet ng-scope" ng-if="board.commentCount > 0">•</span>
+                    <i class="fa fa-comment ng-binding ng-scope" ng-if="board.commentCount > 0">7</i>
+                    <span class="bullet ng-scope" ng-if="board.readingListUserCount > 0">•</span>
+                    <i class="fa fa-bookmark ng-binding ng-scope" ng-if="board.readingListUserCount > 0">303</i>
+                </span>
+            </a>
+            <a itemprop="url" ng-href="/users/58/boards/10649-board-games-for-one" rel="bookmark" ng-click="checkBoardPermissions(board, $event)" href="/users/58/boards/10649-board-games-for-one">
+                <p class="board-description ng-binding" itemprop="description">{{post.content}}</p>
+            </a>
+            <div class="ng-scope" ng-include="templatePath" title="Bookmark" lst-reading-list-buttons="board">
+                <a class="bookmark ng-scope" ng-class="{added: isInReadingList}" ng-click="toggleInReadingList()">
+                    <i class="fa fa-bookmark" ng-class="{added: isInReadingList}"></i>
+                    <span class="ng-scope" ng-if="!isInReadingList">Add to Reading List</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</article>
+</section>
